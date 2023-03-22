@@ -7,7 +7,7 @@
 .header {
     display: flex;
     justify-content: space-between;
-    background-color: lightblue;
+    background-color: rgb(0, 0, 0);
     padding: 0px 12%;
 }
 
@@ -15,6 +15,7 @@
     margin: 20px;
     font-size: 20px;
     font-weight: 800;
+    color: white;
 }
 
 .header-right-menu ul {
@@ -23,13 +24,28 @@
     gap: 20px;
 }
 
+.header-right-menu .about-me {
+    color: rgb(255, 36, 36);
+    font-weight: bold;
+}
+
+.header-right-menu .my-crew {
+    color: rgb(32, 205, 32);
+    font-weight: bold;
+}
+
+.header-right-menu .contact-me {
+    color: yellow;
+    font-weight: bold;
+}
+
 li {
     list-style: none;
 }
 
 a {
     text-decoration: none;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 .body {
@@ -40,7 +56,15 @@ a {
     align-items: center;
     padding-top: 120px;
     padding-bottom: 120px;
-    background-color: lightpink;
+    background-image: url(image/rainbow-bg2.png);
+    background-position: center;
+    background-size: cover;
+    
+}
+
+@keyframes spin{
+	from{transform:rotate(0deg)}
+	to{transform:rotate(360deg)}	
 }
 
 h1 {
@@ -75,6 +99,8 @@ button {
     width: 500px;
     height: 250px;
     object-fit: cover;
+    border-radius: 30px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .random-info {
@@ -93,7 +119,9 @@ button {
 .fact-box-container {
     display: flex;
     padding: 0px 12%;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
 }
 
 .fact-box {
@@ -107,21 +135,25 @@ button {
     text-align: center;
     margin-top: 10px;
     margin-bottom: 100px;
+    width: 250px;
 }
 
 .square {
     background-color: lightskyblue;
     width: 160px;
     height: 160px;
-    border-radius: 20px;
+    border-radius: 80px;
     text-align: center;
+    animation: spin 5s linear infinite;
 }
 
 .body-quote {
-    background-color: lightpink;
+    background-image: url(image/rainbow-bg2.png);
     height: 300px;
     padding: 0px 12%;
     padding-bottom: 50px;
+    background-position: center;
+    background-size: cover;
 }
 
 .main-quote {
@@ -129,6 +161,7 @@ button {
     text-align: center;
     font-size: 40px;
     font-style: italic;
+    color: white;
 }
 
 .author {
@@ -136,7 +169,7 @@ button {
     text-align: end;
     font-weight: bold;
     font-size: 20px;
-    
+    color: white;
 }
 
 .cta-container {
@@ -149,20 +182,37 @@ button {
 }
 
 .signup-box {
-    background-color: lightcoral;
+    background-image: url(image/rainbow-bg1.png);
+    background-position: center;
+    background-size: cover;
     display: flex;
     padding: 80px 200px;
     border-radius: 20px;
     gap: 30px;
+    align-items: center;
+    justify-content: center;
 }
 
 .cta-left {
     color: white;
 }
 
+.cta-left h2 {
+    margin-bottom: 10px;
+}
+
+.cta-right button {
+    background-color: rgb(53, 53, 254);
+    width: 100px;
+}
+
 .footer {
-    background-color: lightblue;
+    background-color: rgb(0, 0, 0);
     padding: 30px;
     display: flex;
     justify-content: center;
+}
+
+.footer p {
+    color: white;
 }
